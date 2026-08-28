@@ -160,8 +160,11 @@ h3 {
 
 .profile-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.8fr 0.8fr 1.3fr;
   gap: 1.25rem;
+}
+
+.profile-grid-3 {
+  grid-template-columns: 1.4fr 1fr 1fr;
 }
 
 .profile-item + .profile-item {
@@ -184,17 +187,12 @@ h3 {
   gap: 0.35rem;
 }
 
-.avatar {
-  width: 64px;
-  height: 64px;
+.avatar-photo {
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 1.1rem;
+  object-fit: cover;
+  background: var(--accent-soft);
   flex-shrink: 0;
   margin-bottom: 0.4rem;
 }
@@ -344,6 +342,10 @@ h3 {
   transform: scale(1.03);
 }
 
+.tile-education {
+  grid-column: 1 / -1;
+}
+
 .tile-contact {
   grid-column: 1 / -1;
 }
@@ -439,17 +441,11 @@ h3 {
     grid-column: span 2;
   }
 
-  .profile-grid {
+  .profile-grid-3 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .profile-item + .profile-item {
-    border-left: 1px solid var(--border);
-    padding-left: 1.25rem;
-  }
-
-  .profile-about,
-  .profile-skills {
+  .profile-about {
     grid-column: span 2;
     border-left: none;
     padding-left: 0;
@@ -466,7 +462,7 @@ h3 {
     grid-column: span 1;
   }
 
-  .profile-grid {
+  .profile-grid-3 {
     grid-template-columns: 1fr;
   }
 
@@ -477,8 +473,7 @@ h3 {
     padding-top: 1.25rem;
   }
 
-  .profile-about,
-  .profile-skills {
+  .profile-about {
     grid-column: span 1;
   }
 
