@@ -299,6 +299,26 @@ h3 {
   margin: 0 0 0.85rem;
 }
 
+.diagram-link {
+  display: block;
+  margin-bottom: 0.85rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.diagram-link:hover .project-diagram {
+  transform: scale(1.03);
+}
+
 .tile-project {
   grid-column: span 1;
 }
