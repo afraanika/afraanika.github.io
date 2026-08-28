@@ -10,166 +10,108 @@
 <body>
   <header class="hero">
     <div class="container hero-inner">
-      <div class="avatar" aria-hidden="true">AA</div>
       <div class="hero-text">
-        <h1>Afra Anika</h1>
-        <p class="tagline">Software Engineer &amp; NLP Researcher</p>
+        <span class="hero-name">Afra Anika</span>
+        <span class="hero-sep">·</span>
+        <span class="tagline">Software Engineer &amp; NLP Researcher</span>
       </div>
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about" class="section">
+  <main class="container bento">
+    <section class="tile tile-about span-2">
       <h2>About</h2>
       <p>
         NLP researcher &amp; software engineer exploring low-resource language
-        processing, LLMs, and retrieval-augmented generation (RAG). 4+ years
-        of industry experience building production web applications, and 6+
-        years of research experience in natural language processing, with
-        hands-on work integrating LLM-based tools and APIs.
+        processing, LLMs, and retrieval-augmented generation (RAG). Hands-on
+        experience integrating LLM-based tools and APIs into production web
+        applications.
       </p>
     </section>
 
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <ol class="timeline">
-        <li>
-          <div class="timeline-date">Jan 2025 — Present</div>
-          <div class="timeline-body">
-            <h3>Software Engineer</h3>
-            <p class="timeline-org">Cefalo Bangladesh Ltd, Dhaka</p>
-            <p>4+ years building production web applications; hands-on experience integrating LLM-based tools and APIs.</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-date">Dec 2022 — Dec 2024</div>
-          <div class="timeline-body">
-            <h3>Associate Software Engineer</h3>
-            <p class="timeline-org">Cefalo Bangladesh Ltd, Dhaka</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-date">Jun 2022 — Nov 2022</div>
-          <div class="timeline-body">
-            <h3>Trainee Software Engineer</h3>
-            <p class="timeline-org">Cefalo Bangladesh Ltd, Dhaka</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-date">May 2020 — May 2022</div>
-          <div class="timeline-body">
-            <h3>Admin Officer</h3>
-            <p class="timeline-org">Blooming Buds Elementary School, Dhaka</p>
-          </div>
-        </li>
-      </ol>
+    <section class="tile tile-avatar">
+      <div class="avatar" aria-hidden="true">AA</div>
+      <p class="tile-avatar-role">Software Engineer</p>
+      <p class="tile-avatar-loc">Dhaka, Bangladesh</p>
     </section>
 
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <ol class="timeline">
-        <li>
-          <div class="timeline-date">Feb 2020</div>
-          <div class="timeline-body">
-            <h3>B.Sc. in Computer Science &amp; Engineering</h3>
-            <p class="timeline-org">United International University, Dhaka</p>
-            <p>CGPA 3.75/4.00 — "Cum Laude" Scholastic Honour</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-date">2015</div>
-          <div class="timeline-body">
-            <h3>Higher Secondary Certificate (Science)</h3>
-            <p class="timeline-org">Birshreshtha Munshi Abdur Rouf Public College</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-date">2013</div>
-          <div class="timeline-body">
-            <h3>Secondary School Certificate (Science)</h3>
-            <p class="timeline-org">Kakoli High School and College</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>
-          <span class="skill-label">Java</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 90%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">Python</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 90%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">JavaScript</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 85%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">Django / Spring Boot</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 85%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">Vue.js</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 75%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">AWS / Docker / Kubernetes</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 75%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">MySQL</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 80%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">RAG / LLM tooling</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 85%"></span></span>
-        </li>
-        <li>
-          <span class="skill-label">LaTeX</span>
-          <span class="skill-bar"><span class="skill-fill" style="--level: 80%"></span></span>
-        </li>
-      </ul>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Healthcare RAG Grounding</h3>
-          <p>Local-first RAG pipeline that answers healthcare questions from cited PDF sources, using FastAPI, Chroma, sentence-transformers, and Ollama — no hosted LLM APIs.</p>
-          <a href="https://github.com/afraanika/healthcare-rag-grounding" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="project-card">
-          <h3>Chat with PDF (RAG)</h3>
-          <p>Multi-user RAG web app to chat with your PDFs — built stage-by-stage (chunking → embeddings → retrieval → generation), with per-user auth, Docker deployment, and Cloudflare Tunnel exposure.</p>
-          <a href="https://github.com/afraanika/chat-with-pdf-rag" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="project-card">
-          <h3>Wikipedia RAG QA Bot</h3>
-          <p>Domain question-answering bot using retrieval-augmented generation over Wikipedia articles, with local embeddings and a local Ollama model — no paid API required.</p>
-          <a href="https://github.com/afraanika/wikipedia-rag-qa-bot" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
+    <section class="tile tile-stats">
+      <div class="stat">
+        <span class="stat-number">4+</span>
+        <span class="stat-label">years industry</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">years research</span>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section class="tile tile-skills">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Django</li>
+        <li>Spring Boot</li>
+        <li>Vue.js</li>
+        <li>AWS</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>MySQL</li>
+        <li>RAG / LLM tooling</li>
+        <li>LaTeX</li>
+      </ul>
+    </section>
+
+    <section class="tile tile-experience span-2">
+      <h2>Experience</h2>
+      <ul class="compact-list">
+        <li><span class="cl-date">2025—now</span><span class="cl-body"><strong>Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</span></li>
+        <li><span class="cl-date">2022—24</span><span class="cl-body"><strong>Associate Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</span></li>
+        <li><span class="cl-date">2022</span><span class="cl-body"><strong>Trainee Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</span></li>
+        <li><span class="cl-date">2020—22</span><span class="cl-body"><strong>Admin Officer</strong> · Blooming Buds Elementary School, Dhaka</span></li>
+      </ul>
+    </section>
+
+    <section class="tile tile-education">
+      <h2>Education</h2>
+      <ul class="compact-list">
+        <li><span class="cl-date">2020</span><span class="cl-body"><strong>B.Sc. CSE</strong> · United International University — Cum Laude, 3.75/4.00</span></li>
+        <li><span class="cl-date">2015</span><span class="cl-body">HSC (Science) · Birshreshtha Munshi Abdur Rouf Public College</span></li>
+        <li><span class="cl-date">2013</span><span class="cl-body">SSC (Science) · Kakoli High School and College</span></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="tile tile-project-featured span-2">
+      <span class="tile-eyebrow">Featured project</span>
+      <h2>Healthcare RAG Grounding</h2>
+      <p>Local-first RAG pipeline that answers healthcare questions from cited PDF sources, using FastAPI, Chroma, sentence-transformers, and Ollama — no hosted LLM APIs.</p>
+      <a href="https://github.com/afraanika/healthcare-rag-grounding" target="_blank" rel="noopener">View on GitHub →</a>
+    </section>
+
+    <section class="tile tile-project">
+      <h3>Chat with PDF (RAG)</h3>
+      <p>Multi-user RAG web app to chat with your PDFs — chunking → embeddings → retrieval → generation, with per-user auth and Docker deployment.</p>
+      <a href="https://github.com/afraanika/chat-with-pdf-rag" target="_blank" rel="noopener">View on GitHub →</a>
+    </section>
+
+    <section class="tile tile-project">
+      <h3>Wikipedia RAG QA Bot</h3>
+      <p>Domain question-answering bot using RAG over Wikipedia articles, with local embeddings and a local Ollama model — no paid API required.</p>
+      <a href="https://github.com/afraanika/wikipedia-rag-qa-bot" target="_blank" rel="noopener">View on GitHub →</a>
+    </section>
+
+    <section id="contact" class="tile tile-contact span-2">
       <h2>Contact</h2>
-      <ul class="contact-list">
+      <ul class="chips chips-links">
         <li><a href="mailto:afraanikaa@gmail.com">afraanikaa@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/afra-anika" target="_blank" rel="noopener">linkedin.com/in/afra-anika</a></li>
-        <li><a href="https://github.com/afraanika" target="_blank" rel="noopener">github.com/afraanika</a></li>
+        <li><a href="https://www.linkedin.com/in/afra-anika" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/afraanika" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://scholar.google.com/citations?user=9EGQ6sIAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
       </ul>
     </section>
