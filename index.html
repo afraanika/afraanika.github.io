@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afra Anika — Software Engineer</title>
+  <meta name="description" content="Portfolio of Afra Anika, Software Engineer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="avatar" aria-hidden="true">AA</div>
+      <div class="hero-text">
+        <h1>Afra Anika</h1>
+        <p class="tagline">Software Engineer</p>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        Software engineer who enjoys building things end to end — from backend
+        services to the tools and interfaces around them. Recently focused on
+        retrieval-augmented generation (RAG) systems and full-stack web apps.
+        <!-- TODO: replace with your own bio -->
+      </p>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="timeline-date">2024 — Present</div>
+          <div class="timeline-body">
+            <h3>Software Engineer</h3>
+            <p class="timeline-org">Cefalo Bangladesh Ltd</p>
+            <p><!-- TODO: describe your role and impact --></p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-date">20XX — 20XX</div>
+          <div class="timeline-body">
+            <h3>Role title</h3>
+            <p class="timeline-org">Company name</p>
+            <p><!-- TODO: add earlier experience or education --></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>
+          <span class="skill-label">Python</span>
+          <span class="skill-bar"><span class="skill-fill" style="--level: 90%"></span></span>
+        </li>
+        <li>
+          <span class="skill-label">JavaScript / TypeScript</span>
+          <span class="skill-bar"><span class="skill-fill" style="--level: 85%"></span></span>
+        </li>
+        <li>
+          <span class="skill-label">Django</span>
+          <span class="skill-bar"><span class="skill-fill" style="--level: 80%"></span></span>
+        </li>
+        <li>
+          <span class="skill-label">React / Vue</span>
+          <span class="skill-bar"><span class="skill-fill" style="--level: 75%"></span></span>
+        </li>
+        <li>
+          <span class="skill-label">RAG / LLM tooling</span>
+          <span class="skill-bar"><span class="skill-fill" style="--level: 80%"></span></span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Healthcare RAG Grounding</h3>
+          <p>Local-first RAG pipeline that answers healthcare questions from cited PDF sources, using FastAPI, Chroma, sentence-transformers, and Ollama — no hosted LLM APIs.</p>
+          <a href="https://github.com/afraanika/healthcare-rag-grounding" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="project-card">
+          <h3>Chat with PDF (RAG)</h3>
+          <p>Multi-user RAG web app to chat with your PDFs — built stage-by-stage (chunking → embeddings → retrieval → generation), with per-user auth, Docker deployment, and Cloudflare Tunnel exposure.</p>
+          <a href="https://github.com/afraanika/chat-with-pdf-rag" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="project-card">
+          <h3>Wikipedia RAG QA Bot</h3>
+          <p>Domain question-answering bot using retrieval-augmented generation over Wikipedia articles, with local embeddings and a local Ollama model — no paid API required.</p>
+          <a href="https://github.com/afraanika/wikipedia-rag-qa-bot" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:afra.anika@cefalo.no">afra.anika@cefalo.no</a></li>
+        <li><a href="https://github.com/afraanika" target="_blank" rel="noopener">github.com/afraanika</a></li>
+        <li><a href="#"><!-- TODO: add LinkedIn URL -->LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Afra Anika</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
