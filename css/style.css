@@ -188,7 +188,7 @@ h3 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
@@ -606,6 +606,10 @@ h3 {
     border-left: none;
     padding-left: 0;
   }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -631,6 +635,10 @@ h3 {
 
   .profile-about {
     grid-column: span 1;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
   .compact-list li {
