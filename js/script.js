@@ -1,11 +1,11 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const hero = document.querySelector(".hero");
+const topbar = document.querySelector(".topbar");
 const tiles = document.querySelectorAll("main .tile");
 const backToTop = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
-  hero.classList.toggle("scrolled", window.scrollY > 10);
+  topbar.classList.toggle("scrolled", window.scrollY > 10);
   backToTop.classList.toggle("visible", window.scrollY > 400);
 });
 

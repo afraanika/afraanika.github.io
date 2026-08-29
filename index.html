@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <span class="hero-name">Afra Anika</span>
-        <span class="hero-sep">·</span>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-text">
+        <span class="topbar-name">Afra Anika</span>
+        <span class="topbar-sep">·</span>
         <span class="tagline">Software Engineer &amp; NLP Researcher</span>
       </div>
       <nav class="nav">
+        <a href="#services">What I Do</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
@@ -23,7 +24,48 @@
     </div>
   </header>
 
+  <section class="intro-hero">
+    <div class="container intro-hero-inner">
+      <img class="intro-hero-photo" src="assets/photos/afra-anika-hero.png" alt="Afra Anika" />
+      <div class="intro-hero-text">
+        <span class="intro-hero-eyebrow">Hi, I'm</span>
+        <h1>Afra Anika</h1>
+        <p class="intro-hero-tagline">Software Engineer &amp; NLP Researcher exploring low-resource language processing, LLMs, and retrieval-augmented generation.</p>
+        <div class="intro-hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main class="container bento">
+    <section id="services" class="tile tile-services">
+      <h2>What I Do</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">🗣️</span>
+          <h3>NLP Research</h3>
+          <p>Low-resource language processing, question classification, and applied ML for text.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">🧠</span>
+          <h3>RAG &amp; LLM Systems</h3>
+          <p>Retrieval-augmented generation pipelines, grounding, and local-first LLM tooling.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">⚙️</span>
+          <h3>Backend &amp; Full-Stack</h3>
+          <p>Production web applications with Django, Spring Boot, and modern JS frameworks.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">📊</span>
+          <h3>Data &amp; ML</h3>
+          <p>Classification, ensembling, and evaluation pipelines for real-world datasets.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="tile tile-profile">
       <div class="profile-grid profile-grid-3">
         <div class="profile-item profile-about">
