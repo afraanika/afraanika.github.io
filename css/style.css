@@ -239,7 +239,6 @@ h3 {
   margin: -0.5rem 0 1.5rem;
   color: var(--text-muted);
   font-size: 0.95rem;
-  max-width: 65ch;
 }
 
 /* About */
@@ -340,7 +339,6 @@ h3 {
   list-style: none;
   position: relative;
   padding-right: 2.5rem;
-  max-width: 65ch;
 }
 
 .case-study-summary-toggle::-webkit-details-marker {
@@ -520,11 +518,10 @@ h3 {
 .tile-beyond p {
   margin: 0 0 0.75rem;
   color: var(--text-muted);
-  max-width: 65ch;
 }
 
 .tile-beyond .goal-callout {
-  max-width: 65ch;
+  max-width: none;
 }
 
 .tile-beyond .btn {
