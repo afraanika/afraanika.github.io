@@ -186,55 +186,64 @@ h3 {
   grid-column: 1 / -1;
 }
 
-.services-grid {
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: 72px 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding-left 0.2s ease, background 0.2s ease;
 }
 
-@media (max-width: 1040px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.expertise-row:first-child {
+  padding-top: 0;
 }
 
-.service-card {
-  display: block;
-  text-align: left;
-  padding: 1.25rem 0.75rem;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+.expertise-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.service-card:hover {
+.expertise-row:hover {
   text-decoration: none;
-  transform: translateY(-3px);
-  border-color: var(--border);
+  padding-left: 0.5rem;
   background: var(--bg);
 }
 
-.service-icon-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  margin: 0 0 0.75rem;
-  border-radius: 50%;
-  background: var(--accent-soft);
-  font-size: 1.5rem;
+.expertise-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
 }
 
-.service-card h3 {
-  font-size: 1rem;
+.expertise-body h3 {
+  font-size: 1.1rem;
   color: var(--text);
 }
 
-.service-card p {
+.expertise-body p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 600px) {
+  .expertise-row {
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+  }
+
+  .expertise-num {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -769,10 +778,6 @@ h3 {
 
   .profile-about {
     grid-column: span 1;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
   }
 
   .compact-list li {
