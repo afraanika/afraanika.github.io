@@ -704,6 +704,59 @@ h3 {
   grid-column: 1 / -1;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.education-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: var(--bg);
+}
+
+.education-card .cl-date {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.education-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+}
+
+.education-institution {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.education-result {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.education-result .stat-number {
+  font-size: 1.4rem;
+}
+
+.education-result-scale {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 0.1rem;
+}
+
+@media (max-width: 780px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tile-contact {
   grid-column: 1 / -1;
 }
