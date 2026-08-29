@@ -598,6 +598,7 @@ h3 {
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 10%;
   background: var(--accent-soft);
   flex-shrink: 0;
   margin-bottom: 0.4rem;
