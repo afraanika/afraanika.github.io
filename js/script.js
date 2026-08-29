@@ -25,3 +25,68 @@ const tileObserver = new IntersectionObserver(
 );
 
 tiles.forEach((tile) => tileObserver.observe(tile));
+
+// Diagram lightbox
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector(".lightbox-img");
+const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+document.querySelectorAll("[data-lightbox]").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    lightboxImg.src = link.dataset.lightbox;
+    lightboxImg.alt = link.dataset.lightboxAlt || "";
+    lightbox.hidden = false;
+  });
+});
+
+function closeLightbox() {
+  lightbox.hidden = true;
+  lightboxImg.src = "";
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+});
+
+// Click-to-play publication videos
+document.querySelectorAll(".pub-video").forEach((button) => {
+  button.addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.src = button.dataset.embedSrc;
+    iframe.title = button.dataset.embedTitle;
+    iframe.allow = "autoplay";
+    iframe.allowFullscreen = true;
+    button.replaceWith(iframe);
+  });
+});
+
+// Animated stat counters
+const statObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.countTo, 10);
+      const duration = 900;
+      const start = performance.now();
+
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const value = Math.round(progress * target);
+        el.textContent = `${value}+`;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+      statObserver.unobserve(el);
+    });
+  },
+  { threshold: 0.5 }
+);
+
+document.querySelectorAll("[data-count-to]").forEach((el) => statObserver.observe(el));

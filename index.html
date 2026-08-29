@@ -104,11 +104,11 @@
 
         <div class="profile-item profile-stats">
           <div class="stat">
-            <span class="stat-number">4+</span>
+            <span class="stat-number" data-count-to="4">0+</span>
             <span class="stat-label">years industry</span>
           </div>
           <div class="stat">
-            <span class="stat-number">6+</span>
+            <span class="stat-number" data-count-to="6">0+</span>
             <span class="stat-label">years research</span>
           </div>
         </div>
@@ -157,7 +157,7 @@
       <div class="proj-grid">
         <article class="proj-card">
           <h3>Healthcare RAG Grounding</h3>
-          <a href="assets/diagrams/healthcareraggroundingpipeline.png" target="_blank" rel="noopener" class="diagram-link">
+          <a href="assets/diagrams/healthcareraggroundingpipeline.png" target="_blank" rel="noopener" class="diagram-link" data-lightbox="assets/diagrams/healthcareraggroundingpipeline.png" data-lightbox-alt="Healthcare RAG Grounding pipeline architecture diagram">
             <img class="project-diagram" src="assets/diagrams/healthcareraggroundingpipeline.png" alt="Healthcare RAG Grounding pipeline architecture diagram" loading="lazy" />
           </a>
           <p>Local-first RAG pipeline that answers healthcare questions from cited PDF sources, using FastAPI, Chroma, sentence-transformers, and Ollama — no hosted LLM APIs.</p>
@@ -166,7 +166,7 @@
 
         <article class="proj-card">
           <h3>Chat with PDF (RAG)</h3>
-          <a href="assets/diagrams/chatwithpdfragpipeline.png" target="_blank" rel="noopener" class="diagram-link">
+          <a href="assets/diagrams/chatwithpdfragpipeline.png" target="_blank" rel="noopener" class="diagram-link" data-lightbox="assets/diagrams/chatwithpdfragpipeline.png" data-lightbox-alt="Chat with PDF RAG pipeline architecture diagram">
             <img class="project-diagram" src="assets/diagrams/chatwithpdfragpipeline.png" alt="Chat with PDF RAG pipeline architecture diagram" loading="lazy" />
           </a>
           <p>Multi-user RAG web app to chat with your PDFs — chunking → embeddings → retrieval → generation, with per-user auth and Docker deployment.</p>
@@ -175,7 +175,7 @@
 
         <article class="proj-card">
           <h3>Wikipedia RAG QA Bot</h3>
-          <a href="assets/diagrams/wikipediaragqabotpipeline.png" target="_blank" rel="noopener" class="diagram-link">
+          <a href="assets/diagrams/wikipediaragqabotpipeline.png" target="_blank" rel="noopener" class="diagram-link" data-lightbox="assets/diagrams/wikipediaragqabotpipeline.png" data-lightbox-alt="Wikipedia RAG QA Bot pipeline architecture diagram">
             <img class="project-diagram" src="assets/diagrams/wikipediaragqabotpipeline.png" alt="Wikipedia RAG QA Bot pipeline architecture diagram" loading="lazy" />
           </a>
           <p>Domain question-answering bot using RAG over Wikipedia articles, with local embeddings and a local Ollama model — no paid API required.</p>
@@ -188,23 +188,26 @@
       <h2>Publications</h2>
       <div class="pub-grid">
         <article class="pub-card">
-          <div class="pub-video">
-            <iframe src="https://drive.google.com/file/d/1gyF338BA927mq2Iv4ZF7ZzlBuRDNmaRW/preview" title="Bengali QC Architecture" allow="autoplay" allowfullscreen loading="lazy"></iframe>
-          </div>
+          <button type="button" class="pub-video" data-embed-src="https://drive.google.com/file/d/1gyF338BA927mq2Iv4ZF7ZzlBuRDNmaRW/preview" data-embed-title="Bengali QC Architecture" aria-label="Play video: Bengali QC Architecture">
+            <img class="pub-thumb" src="https://drive.google.com/thumbnail?id=1gyF338BA927mq2Iv4ZF7ZzlBuRDNmaRW&amp;sz=w800" alt="" loading="lazy" />
+            <span class="play-badge" aria-hidden="true">▶</span>
+          </button>
           <h3>A Comprehensive Comparison of Machine Learning Based Methods Used in Bengali Question Classification</h3>
           <p class="pub-meta">A Anika, MH Rahman, S Islam, ASMM Jameel, CR Rahman · 2019 IEEE Intl. Conf. on Signal Processing, Information, Communication &amp; Systems (SPICSCON)</p>
         </article>
         <article class="pub-card">
-          <div class="pub-video">
-            <iframe src="https://drive.google.com/file/d/1GI0mIm_KrMbvpK1hyP45jlfT5FtmaV0S/preview" title="Two Stage Bengali QC Architecture" allow="autoplay" allowfullscreen loading="lazy"></iframe>
-          </div>
+          <button type="button" class="pub-video" data-embed-src="https://drive.google.com/file/d/1GI0mIm_KrMbvpK1hyP45jlfT5FtmaV0S/preview" data-embed-title="Two Stage Bengali QC Architecture" aria-label="Play video: Two Stage Bengali QC Architecture">
+            <img class="pub-thumb" src="https://drive.google.com/thumbnail?id=1GI0mIm_KrMbvpK1hyP45jlfT5FtmaV0S&amp;sz=w800" alt="" loading="lazy" />
+            <span class="play-badge" aria-hidden="true">▶</span>
+          </button>
           <h3>A Hybrid Approach Towards Two Stage Bengali Question Classification Utilizing Smart Data Balancing Technique</h3>
           <p class="pub-meta">MH Rahman, CR Rahman, R Amin, MHR Sifat, A Anika · 2020 Intl. Conf. on Cyber Security and Computer Science</p>
         </article>
         <article class="pub-card">
-          <div class="pub-video">
-            <iframe src="https://drive.google.com/file/d/1Y0LvNLXkBEalIP6XNF4do_OD9TSjG0T3/preview" title="Soil Evaluation Architecture" allow="autoplay" allowfullscreen loading="lazy"></iframe>
-          </div>
+          <button type="button" class="pub-video" data-embed-src="https://drive.google.com/file/d/1Y0LvNLXkBEalIP6XNF4do_OD9TSjG0T3/preview" data-embed-title="Soil Evaluation Architecture" aria-label="Play video: Soil Evaluation Architecture">
+            <img class="pub-thumb" src="https://drive.google.com/thumbnail?id=1Y0LvNLXkBEalIP6XNF4do_OD9TSjG0T3&amp;sz=w800" alt="" loading="lazy" />
+            <span class="play-badge" aria-hidden="true">▶</span>
+          </button>
           <h3>Ensemble of Classifiers Based Soil Evaluation for Crop Cultivation</h3>
           <p class="pub-meta">MSJ Jamil, A Anika, MSH Mukta, MN Huda · 2022 IEEE Region 10 Symposium (TENSYMP)</p>
         </article>
@@ -256,6 +259,11 @@
   </footer>
 
   <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
 
   <script src="js/script.js"></script>
 </body>
