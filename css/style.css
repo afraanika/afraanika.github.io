@@ -448,16 +448,6 @@ h3 {
   font-size: 0.85rem;
 }
 
-.tile-eyebrow {
-  display: block;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
-}
-
 .tile-projects {
   grid-column: 1 / -1;
 }
