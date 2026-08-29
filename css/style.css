@@ -426,8 +426,8 @@ h3 {
 
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
 .skill-group h4 {
@@ -444,12 +444,6 @@ h3 {
   margin: 0 0 0.75rem;
   color: var(--text-muted);
   font-size: 0.85rem;
-}
-
-@media (max-width: 780px) {
-  .skill-groups {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Currently exploring */
