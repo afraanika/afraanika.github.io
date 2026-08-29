@@ -194,7 +194,7 @@ h3 {
 
 .service-card {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 1.25rem 0.75rem;
   border-radius: 12px;
   border: 1px solid transparent;
@@ -214,7 +214,7 @@ h3 {
   justify-content: center;
   width: 56px;
   height: 56px;
-  margin: 0 auto 0.75rem;
+  margin: 0 0 0.75rem;
   border-radius: 50%;
   background: var(--accent-soft);
   font-size: 1.5rem;
