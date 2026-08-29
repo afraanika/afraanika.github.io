@@ -192,6 +192,12 @@ h3 {
   gap: 1.25rem;
 }
 
+@media (max-width: 1040px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .service-card {
   display: block;
   text-align: left;
@@ -654,10 +660,6 @@ h3 {
     grid-column: span 2;
     border-left: none;
     padding-left: 0;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
