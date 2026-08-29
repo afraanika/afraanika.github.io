@@ -210,7 +210,7 @@ h3 {
   justify-content: center;
   width: 56px;
   height: 56px;
-  margin: 0 0 0.75rem;
+  margin: 0 auto 0.75rem;
   border-radius: 50%;
   background: var(--accent-soft);
   font-size: 1.5rem;
@@ -219,6 +219,7 @@ h3 {
 .expertise-card h3 {
   font-size: 1rem;
   color: var(--text);
+  text-align: center;
 }
 
 .expertise-card p {
@@ -320,6 +321,10 @@ h3 {
 
 .tile-services {
   grid-column: 1 / -1;
+}
+
+.tile-services > h2 {
+  text-align: center;
 }
 
 .tile-profile {
