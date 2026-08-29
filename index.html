@@ -80,7 +80,7 @@
       </div>
       <div class="stats-row">
         <div class="stat">
-          <span class="stat-number" data-count-to="3">0+</span>
+          <span class="stat-number" data-count-to="4">0+</span>
           <span class="stat-label">Years<br />Software Engineering</span>
         </div>
         <div class="stat">
@@ -100,14 +100,15 @@
 
     <section id="projects" class="tile tile-projects">
       <h2>Projects</h2>
-      <p class="section-intro">What I build, and how I think — three RAG systems, each pushing the pattern a step further.</p>
+      <p class="section-intro">What I build, and how I think — three RAG systems, from a first experiment to a production-shaped system. Click any project for the full breakdown.</p>
 
-      <article class="case-study">
-        <div class="case-study-header">
-          <span class="eyebrow">Featured Project</span>
+      <details class="case-study" open>
+        <summary class="case-study-summary-toggle">
+          <span class="progression-tag">Deeper Investigation</span>
           <h3>Healthcare RAG Grounding</h3>
           <p class="case-study-summary">A local-first RAG pipeline that answers healthcare questions from cited clinical PDFs — every answer traceable back to the exact source page.</p>
-        </div>
+          <span class="case-study-toggle-icon" aria-hidden="true"></span>
+        </summary>
         <div class="case-study-body">
           <a href="assets/diagrams/healthcareraggroundingpipeline.png" target="_blank" rel="noopener" class="diagram-link case-study-diagram" data-lightbox="assets/diagrams/healthcareraggroundingpipeline.png" data-lightbox-alt="Healthcare RAG Grounding pipeline architecture diagram">
             <img class="project-diagram" src="assets/diagrams/healthcareraggroundingpipeline.png" alt="Healthcare RAG Grounding pipeline architecture diagram" loading="lazy" />
@@ -143,40 +144,94 @@
             <a href="https://github.com/afraanika/healthcare-rag-grounding" target="_blank" rel="noopener" class="btn btn-secondary">View Repository →</a>
           </div>
         </div>
-      </article>
+      </details>
 
-      <div class="progression">
-        <h3>Exploring Retrieval-Augmented Generation</h3>
-        <p class="section-intro">Experiment → application → deeper investigation — three builds of the same retrieve-then-generate pattern.</p>
-        <div class="progression-track">
-          <article class="proj-card progression-step">
-            <span class="progression-tag">Experiment</span>
-            <h4>Wikipedia RAG QA Bot</h4>
-            <a href="assets/diagrams/wikipediaragqabotpipeline.png" target="_blank" rel="noopener" class="diagram-link" data-lightbox="assets/diagrams/wikipediaragqabotpipeline.png" data-lightbox-alt="Wikipedia RAG QA Bot pipeline architecture diagram">
-              <img class="project-diagram" src="assets/diagrams/wikipediaragqabotpipeline.png" alt="Wikipedia RAG QA Bot pipeline architecture diagram" loading="lazy" />
-            </a>
-            <p>A domain question-answering bot: ingest named Wikipedia articles, then answer questions from that stored text only — a first hands-on build of the retrieve-then-generate pattern, with local embeddings and a local Ollama model.</p>
-            <a href="https://github.com/afraanika/wikipedia-rag-qa-bot" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-          <span class="progression-arrow" aria-hidden="true">→</span>
-          <article class="proj-card progression-step">
-            <span class="progression-tag">Application</span>
-            <h4>Chat with PDF</h4>
-            <a href="assets/diagrams/chatwithpdfragpipeline.png" target="_blank" rel="noopener" class="diagram-link" data-lightbox="assets/diagrams/chatwithpdfragpipeline.png" data-lightbox-alt="Chat with PDF RAG pipeline architecture diagram">
-              <img class="project-diagram" src="assets/diagrams/chatwithpdfragpipeline.png" alt="Chat with PDF RAG pipeline architecture diagram" loading="lazy" />
-            </a>
-            <p>The same pipeline, built stage-by-stage (chunking → embeddings → retrieval → generation) into a real multi-user web app — accounts, per-user document storage, and Docker deployment.</p>
-            <a href="https://github.com/afraanika/chat-with-pdf-rag" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-          <span class="progression-arrow" aria-hidden="true">→</span>
-          <article class="proj-card progression-step">
-            <span class="progression-tag">Deeper investigation</span>
-            <h4>Healthcare RAG Grounding</h4>
-            <p>Featured above — the same core pattern, now focused specifically on citation and grounding rather than just answering.</p>
-            <a href="#projects">See case study ↑</a>
-          </article>
+      <details class="case-study">
+        <summary class="case-study-summary-toggle">
+          <span class="progression-tag">Application</span>
+          <h3>Chat with PDF (RAG)</h3>
+          <p class="case-study-summary">A multi-user RAG web app built stage-by-stage — each pipeline step implemented and understood on its own, not borrowed from a library.</p>
+          <span class="case-study-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="case-study-body">
+          <a href="assets/diagrams/chatwithpdfragpipeline.png" target="_blank" rel="noopener" class="diagram-link case-study-diagram" data-lightbox="assets/diagrams/chatwithpdfragpipeline.png" data-lightbox-alt="Chat with PDF RAG pipeline architecture diagram">
+            <img class="project-diagram" src="assets/diagrams/chatwithpdfragpipeline.png" alt="Chat with PDF RAG pipeline architecture diagram" loading="lazy" />
+          </a>
+          <div class="case-study-details">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Most "chat with your PDF" tutorials skip straight to a working demo built on top of a RAG library, which hides how each step actually works. That makes the pipeline hard to debug or improve once something goes wrong.</p>
+            </div>
+            <div class="case-block">
+              <h4>Approach</h4>
+              <p class="pipeline-flow">PDF → Chunking → Embeddings → Vector Index → Retrieval → Prompt → Generation</p>
+              <p>Built one stage at a time — text extraction, configurable-size chunking, embeddings via sentence-transformers, a vector index for retrieval, and prompt construction for generation — with a FastAPI web app layered on top: signup/login with bcrypt-hashed passwords and signed session cookies, per-user document storage, and a Docker Compose deployment (exposed for quick testing via a Cloudflare Tunnel).</p>
+            </div>
+            <div class="case-block">
+              <h4>Why it matters</h4>
+              <p>Treating RAG as a black box makes it hard to know where an answer went wrong — a bad chunk, a weak embedding match, or a prompt issue? Building each stage individually turns those into questions you can actually answer.</p>
+            </div>
+            <div class="case-block">
+              <h4>Technology</h4>
+              <ul class="chips">
+                <li>FastAPI</li>
+                <li>SQLAlchemy / SQLite</li>
+                <li>sentence-transformers</li>
+                <li>FAISS</li>
+                <li>Ollama</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h4>What I learned</h4>
+              <p>Building it stage-by-stage made the tradeoffs concrete instead of theoretical — fixed-size vs. semantic chunking, and why a vector index beats brute-force similarity search once a document collection grows past a handful of files.</p>
+            </div>
+            <a href="https://github.com/afraanika/chat-with-pdf-rag" target="_blank" rel="noopener" class="btn btn-secondary">View Repository →</a>
+          </div>
         </div>
-      </div>
+      </details>
+
+      <details class="case-study">
+        <summary class="case-study-summary-toggle">
+          <span class="progression-tag">Experiment</span>
+          <h3>Wikipedia RAG QA Bot</h3>
+          <p class="case-study-summary">A domain-scoped question-answering bot: ingest specific Wikipedia articles, then answer only from that stored text — the first hands-on build of the retrieve-then-generate pattern.</p>
+          <span class="case-study-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="case-study-body">
+          <a href="assets/diagrams/wikipediaragqabotpipeline.png" target="_blank" rel="noopener" class="diagram-link case-study-diagram" data-lightbox="assets/diagrams/wikipediaragqabotpipeline.png" data-lightbox-alt="Wikipedia RAG QA Bot pipeline architecture diagram">
+            <img class="project-diagram" src="assets/diagrams/wikipediaragqabotpipeline.png" alt="Wikipedia RAG QA Bot pipeline architecture diagram" loading="lazy" />
+          </a>
+          <div class="case-study-details">
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Could a small, self-contained retrieve-then-generate loop actually work end-to-end — and stay scoped to a chosen set of sources instead of answering from the model's general knowledge?</p>
+            </div>
+            <div class="case-block">
+              <h4>Approach</h4>
+              <p class="pipeline-flow">Named Wikipedia Articles → Ingest → Embed → Retrieve → LLM → Answer</p>
+              <p>Ingests one or more named Wikipedia articles into stored text, then answers questions using only that text: a question is embedded, the most relevant passages are retrieved, and a local Ollama model (llama3) generates the answer — runnable as a one-off query or an interactive prompt.</p>
+            </div>
+            <div class="case-block">
+              <h4>Why it matters</h4>
+              <p>Constraining a QA system to a named, specific set of sources is the simplest way to keep its answers scoped and predictable — a useful first checkpoint before adding real-world complexity like multi-document or multi-user support.</p>
+            </div>
+            <div class="case-block">
+              <h4>Technology</h4>
+              <ul class="chips">
+                <li>Python</li>
+                <li>Ollama</li>
+                <li>Local Embeddings</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h4>What I learned</h4>
+              <p>This was the first end-to-end retrieve-then-generate loop I built — the main lesson was foundational: get ingest → embed → retrieve → generate working reliably at a small scale before adding any complexity, which is exactly what the next two projects did.</p>
+            </div>
+            <a href="https://github.com/afraanika/wikipedia-rag-qa-bot" target="_blank" rel="noopener" class="btn btn-secondary">View Repository →</a>
+          </div>
+        </div>
+      </details>
     </section>
 
     <section id="publications" class="tile tile-publications">
@@ -227,31 +282,25 @@
 
     <section id="experience" class="tile tile-experience span-2">
       <h2>Experience</h2>
-      <ul class="compact-list">
+      <ul class="compact-list compact-list-wide-date">
         <li>
-          <span class="cl-date">2025—now</span>
+          <span class="cl-date">Jan 2025 — Present</span>
           <div class="cl-body">
             <div class="cl-title"><strong>Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</div>
             <p class="cl-desc">Design and build production backend and frontend systems, including subscription and order-management workflows, with API integrations across internal and third-party services — working across Java/Spring Boot, Django, and Vue.js, deployed on AWS with Docker and Kubernetes.</p>
           </div>
         </li>
         <li>
-          <span class="cl-date">2022—24</span>
+          <span class="cl-date">Dec 2022 — Dec 2024</span>
           <div class="cl-body">
             <div class="cl-title"><strong>Associate Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</div>
             <p class="cl-desc">Built and maintained production web applications end-to-end, contributing across backend services, frontend interfaces, and deployment pipelines.</p>
           </div>
         </li>
         <li>
-          <span class="cl-date">2022</span>
+          <span class="cl-date">Jun 2022 — Nov 2022</span>
           <div class="cl-body">
             <div class="cl-title"><strong>Trainee Software Engineer</strong> · Cefalo Bangladesh Ltd, Dhaka</div>
-          </div>
-        </li>
-        <li>
-          <span class="cl-date">2020—22</span>
-          <div class="cl-body">
-            <div class="cl-title"><strong>Admin Officer</strong> · Blooming Buds Elementary School, Dhaka</div>
           </div>
         </li>
       </ul>
@@ -329,8 +378,9 @@
         <li>Culture</li>
         <li>People</li>
       </ul>
-      <p>I'm fascinated by how different places shape the way people live, eat, work, and see the world.</p>
-      <p class="goal-callout">My personal mission: explore as much of the world as I can before turning 40.</p>
+      <p>Every place I visit rewrites something I thought I understood — how people eat, work, celebrate, or simply spend an ordinary afternoon. I collect these small revisions the way some people collect souvenirs.</p>
+      <p class="goal-callout">My personal mission: explore as much of the world, and learn about as many of its cultures, as I can before I turn 40.</p>
+      <a href="travels.html" class="btn btn-secondary">See my travels &amp; food adventures →</a>
     </section>
 
     <section class="tile tile-education">
