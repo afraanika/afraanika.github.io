@@ -12,12 +12,15 @@ Personal portfolio site, served via GitHub Pages at https://afraanika.github.io.
 
 ## Sections
 
-1. **Profile** — about, photo, years of experience
-2. **Skills** / **Experience**
-3. **Education**
-4. **Projects** — featured project + two others, each with an architecture diagram
-5. **Publications** — papers with embedded video walkthroughs (hosted on Google Drive, must stay shared "anyone with the link" to keep working)
-6. **Contact** — email, LinkedIn, GitHub, Google Scholar
+1. **Hero** — identity line, short bio, personal goal, CTAs
+2. **About** — bio, photo, and stats (years engineering, publications, RAG/LLM projects, personal mission)
+3. **Projects** — Healthcare RAG Grounding as a featured case study (problem/approach/why it matters/tech/learnings), plus the other two RAG projects framed as a progression (experiment → application → deeper investigation)
+4. **Publications** — papers with embedded video walkthroughs (hosted on Google Drive, must stay shared "anyone with the link" to keep working) and topic tags
+5. **Experience** / **Skills** (grouped: Engineering, Cloud & Infrastructure, AI/Research)
+6. **Currently Exploring** — lightweight, forward-looking topics
+7. **Beyond Code** — travel/food/culture personality section
+8. **Education**
+9. **Contact** — email, LinkedIn, GitHub, Google Scholar
 
 ## Editing
 
