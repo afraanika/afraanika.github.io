@@ -1,5 +1,22 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Theme toggle
+const themeToggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+  themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+}
+
+applyTheme(document.documentElement.getAttribute("data-theme"));
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", next);
+  applyTheme(next);
+});
+
 const topbar = document.querySelector(".topbar");
 const tiles = document.querySelectorAll("main .tile");
 const backToTop = document.getElementById("back-to-top");

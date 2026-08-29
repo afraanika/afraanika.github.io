@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <title>Afra Anika — Software Engineer & ML/NLP Researcher</title>
   <meta name="description" content="Afra Anika — Software Engineer and ML/NLP research enthusiast building RAG and LLM systems, with published research in Bengali NLP and low-resource language processing." />
 
@@ -40,6 +47,7 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">🌙</button>
     </div>
   </header>
 

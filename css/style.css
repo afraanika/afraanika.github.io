@@ -24,6 +24,27 @@
   }
 }
 
+/* Manual theme toggle overrides -- take precedence over system preference above */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f5f6f8;
+  --text: #1c1e21;
+  --text-muted: #5b616a;
+  --accent: #b3492c;
+  --accent-soft: #fbe7e0;
+  --border: #e3e5e8;
+}
+
+:root[data-theme="dark"] {
+  --bg: #16110e;
+  --bg-alt: #1f1815;
+  --text: #f2ece7;
+  --text-muted: #a89a91;
+  --accent: #ff8a65;
+  --accent-soft: #3a2b23;
+  --border: #332822;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -545,6 +566,27 @@ h3 {
 .nav a:hover {
   text-decoration: none;
   color: var(--accent);
+}
+
+.theme-toggle {
+  border: none;
+  background: var(--accent-soft);
+  color: var(--accent);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 1.25rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+  filter: brightness(1.05);
 }
 
 /* Bento grid */
