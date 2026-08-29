@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travels & Food — Afra Anika</title>
+  <meta name="description" content="A running journal of Afra Anika's travels, food discoveries, and small cultural finds along the way." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://afraanika.github.io/travels.html" />
+  <meta property="og:title" content="Travels & Food — Afra Anika" />
+  <meta property="og:description" content="A running journal of travels, food discoveries, and small cultural finds along the way." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-text">
+        <span class="topbar-name">Afra Anika</span>
+        <span class="topbar-sep">·</span>
+        <span class="tagline">Travels &amp; Food</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro-hero">
+    <div class="container intro-hero-inner travel-hero-inner">
+      <div class="intro-hero-text">
+        <span class="intro-hero-eyebrow">Beyond Code</span>
+        <h1>Travels &amp; Food</h1>
+        <p class="intro-hero-tagline">Every place I visit rewrites something I thought I understood — how people eat, work, celebrate, or simply spend an ordinary afternoon.</p>
+        <p class="goal-callout">My personal mission: explore as much of the world, and learn about as many of its cultures, as I can before I turn 40.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="container bento">
+    <section class="tile travel-gallery-tile">
+      <h2>Journal</h2>
+      <p class="section-intro">A running log of places, food, and small cultural discoveries — new entries added as they happen.</p>
+
+      <!--
+        To add a new entry: duplicate one <article class="travel-entry"> block below.
+        Replace the placeholder <div class="travel-photo-placeholder"> with:
+          <img class="travel-photo" src="assets/photos/travel/your-photo.jpg" alt="Description of the photo" loading="lazy" />
+        Fill in the date, location/title, and description.
+      -->
+      <div class="travel-grid">
+        <article class="travel-entry">
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span>+ Add photo</span>
+          </div>
+          <div class="travel-entry-body">
+            <span class="travel-entry-date"><!-- Month YYYY --></span>
+            <h3><!-- Location or trip name --></h3>
+            <p><!-- What you ate, saw, or learned --></p>
+          </div>
+        </article>
+
+        <article class="travel-entry">
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span>+ Add photo</span>
+          </div>
+          <div class="travel-entry-body">
+            <span class="travel-entry-date"><!-- Month YYYY --></span>
+            <h3><!-- Location or trip name --></h3>
+            <p><!-- What you ate, saw, or learned --></p>
+          </div>
+        </article>
+
+        <article class="travel-entry">
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span>+ Add photo</span>
+          </div>
+          <div class="travel-entry-body">
+            <span class="travel-entry-date"><!-- Month YYYY --></span>
+            <h3><!-- Location or trip name --></h3>
+            <p><!-- What you ate, saw, or learned --></p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Afra Anika</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="mailto:afraanikaa@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/afra-anika" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/afraanika" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
