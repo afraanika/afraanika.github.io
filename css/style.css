@@ -271,16 +271,36 @@ h3 {
 
 /* Featured project case study */
 
-.case-study {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border);
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  gap: 1.25rem;
+  align-items: start;
 }
 
-.case-study:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
+/* When a card is open, reshape to 2 columns so the two remaining
+   collapsed cards fill a row evenly instead of leaving a leftover
+   empty column (grid tracks don't redistribute space like flex does). */
+.case-study-grid:has(.case-study[open]) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 780px) {
+  .case-study-grid,
+  .case-study-grid:has(.case-study[open]) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-study {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.case-study[open] {
+  grid-column: 1 / -1;
 }
 
 .case-study-summary-toggle {
