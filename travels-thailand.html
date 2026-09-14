@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>Thailand — Travels &amp; Food — Afra Anika</title>
+  <meta name="description" content="Trips, photos, and food notes from Thailand — part of Afra Anika's travel journal." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://afraanika.github.io/travels-thailand.html" />
+  <meta property="og:title" content="Thailand — Travels &amp; Food — Afra Anika" />
+  <meta property="og:description" content="Trips, photos, and food notes from Thailand." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-text">
+        <span class="topbar-name">Afra Anika</span>
+        <span class="topbar-sep">·</span>
+        <span class="tagline">Travels &amp; Food</span>
+      </div>
+      <nav class="nav">
+        <a href="travels.html">← All Countries</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <section class="intro-hero">
+    <div class="container intro-hero-inner travel-hero-inner">
+      <div class="intro-hero-text">
+        <span class="intro-hero-eyebrow">Southeast Asia</span>
+        <h1>Thailand</h1>
+        <p class="intro-hero-tagline">Trip stories, photos, and food notes from Thailand — added here as they're written up.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="container bento">
+    <section class="tile travel-gallery-tile">
+      <!--
+        To add the first real trip: remove the .coming-soon block below and add
+        one <article class="tile trip-card"> per trip as a SIBLING tile inside
+        <main>, e.g.:
+
+        <article class="tile trip-card">
+          <div class="trip-card-header">
+            <h2>Trip title</h2>
+            <span class="cl-date">Date range</span>
+            <ul class="chips trip-count-chip"><li>N photos</li></ul>
+          </div>
+          <p class="section-intro">One or two lines introducing the trip.</p>
+
+          <div class="travel-entry">
+            <img class="travel-photo travel-photo-wide" src="assets/photos/travel/your-photo.jpg" alt="Description" loading="lazy" />
+            <div class="travel-entry-body">
+              <span class="travel-entry-date">Date · Place</span>
+              <h3>Photo title</h3>
+              <p>What was happening in this photo.</p>
+            </div>
+          </div>
+
+          <div class="travel-grid">
+            <article class="travel-entry">
+              <img class="travel-photo" src="assets/photos/travel/your-photo-2.jpg" alt="Description" loading="lazy" />
+              <div class="travel-entry-body">
+                <span class="travel-entry-date">Date</span>
+                <h3>Photo title</h3>
+                <p>Short description.</p>
+              </div>
+            </article>
+            <!-- repeat travel-entry blocks for more photos in this trip -->
+          </div>
+        </article>
+
+        Once at least one trip has food notes, add a "What I Ate" tile as another
+        sibling:
+        <section class="tile">
+          <h2>What I Ate</h2>
+          <p class="section-intro">The part of a country you can't read about.</p>
+          <ul class="compact-list">
+            <li>
+              <span class="food-dish">Dish name</span>
+              <div><span>Where you had it</span><p class="cl-desc">A short note about it.</p></div>
+            </li>
+          </ul>
+        </section>
+      -->
+      <div class="coming-soon">
+        <span class="coming-soon-icon" aria-hidden="true">🍽️</span>
+        <h3>Trips Coming Soon</h3>
+        <p>The first stories and photos from Thailand are on their way.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Afra Anika</p>
+      <ul class="footer-links">
+        <li><a href="travels.html">All Countries</a></li>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="mailto:afraanikaa@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/afra-anika" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/afraanika" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

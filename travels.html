@@ -54,21 +54,81 @@
   </section>
 
   <main id="main-content" class="container bento">
+    <section class="tile travel-map-tile">
+      <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap">
+        <h2>The Map So Far</h2>
+        <p class="section-intro" style="margin: 0">Hover a country, or the list below — they highlight each other.</p>
+        <span class="map-legend">
+          <i class="map-legend-dot visited" aria-hidden="true"></i> Visited
+          <i class="map-legend-dot" aria-hidden="true"></i> Not yet
+        </span>
+      </div>
+
+      <div class="map-layout">
+        <svg id="travels-map" class="map-svg" viewBox="0 0 760 400" role="img" aria-label="World map highlighting Bangladesh, Thailand, the United Arab Emirates, and Malaysia"></svg>
+        <nav class="map-country-list" id="travels-country-list" aria-label="Countries visited">
+          <!-- Populated by js/travels-map.js. If the script or the map data fails to
+               load, this stays empty -- the card grid below still lists every
+               country either way, so nothing is ever missing, only the map graphic. -->
+        </nav>
+      </div>
+
+      <div class="stats-row stats-row-3">
+        <div class="stat">
+          <span class="stat-number" data-count-to="4">0</span>
+          <span class="stat-label">Countries<br />Visited</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count-to="0">0</span>
+          <span class="stat-label">Trips<br />Logged</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count-to="0">0</span>
+          <span class="stat-label">Photos<br />With a Story</span>
+        </div>
+      </div>
+    </section>
+
     <section class="tile travel-gallery-tile">
-      <h2>Journal</h2>
-      <p class="section-intro">A running log of places, food, and small cultural discoveries — new entries added as they happen.</p>
+      <h2>By Country</h2>
+      <p class="section-intro">Four so far. Each one opens its own page of trips, photos, and food — filled in as it gets written up.</p>
 
       <!--
-        To add the first real entry: replace the .coming-soon block below with
-        <div class="travel-grid"> containing one or more <article class="travel-entry">
-        blocks, each with:
-          <img class="travel-photo" src="assets/photos/travel/your-photo.jpg" alt="Description of the photo" loading="lazy" />
-        plus a date, location/title, and description.
+        Each card links to travels-<country>.html. To add a real cover photo, swap
+        the .travel-photo-placeholder div for:
+          <img class="travel-photo" src="assets/photos/travel/bangladesh-cover.jpg" alt="Description" loading="lazy" />
+        To add real trip content, edit the linked country page directly -- its own
+        .coming-soon block documents the trip-card structure to paste in.
       -->
-      <div class="coming-soon">
-        <span class="coming-soon-icon" aria-hidden="true">✈️</span>
-        <h3>Coming Soon</h3>
-        <p>First entries are on their way — check back soon for stories from the road.</p>
+      <div class="travel-grid">
+        <a class="travel-entry country-card" href="travels-bangladesh.html">
+          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-entry-body">
+            <h3>Bangladesh</h3>
+            <p>Journal coming soon.</p>
+          </div>
+        </a>
+        <a class="travel-entry country-card" href="travels-thailand.html">
+          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-entry-body">
+            <h3>Thailand</h3>
+            <p>Journal coming soon.</p>
+          </div>
+        </a>
+        <a class="travel-entry country-card" href="travels-uae.html">
+          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-entry-body">
+            <h3>United Arab Emirates</h3>
+            <p>Journal coming soon.</p>
+          </div>
+        </a>
+        <a class="travel-entry country-card" href="travels-malaysia.html">
+          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-entry-body">
+            <h3>Malaysia</h3>
+            <p>Journal coming soon.</p>
+          </div>
+        </a>
       </div>
     </section>
   </main>
@@ -93,5 +153,12 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"
+          integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
+          integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67"
+          crossorigin="anonymous"></script>
+  <script src="js/travels-map.js"></script>
 </body>
 </html>

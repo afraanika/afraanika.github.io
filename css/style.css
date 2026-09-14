@@ -975,6 +975,207 @@ h3 {
   }
 }
 
+/* Travels page -- countries map */
+
+.travel-map-tile {
+  grid-column: 1 / -1;
+}
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.map-legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.map-legend-dot.visited {
+  background: var(--accent);
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.land {
+  fill: var(--border);
+  stroke: var(--bg-alt);
+  stroke-width: 0.5;
+}
+
+.land.visited {
+  fill: var(--accent);
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.land.visited:hover,
+.land.visited.on {
+  filter: brightness(1.15);
+}
+
+.pin {
+  fill: var(--bg);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+
+.pinlabel {
+  font: 600 11px var(--font-sans);
+  fill: var(--text);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 3.5px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.map-fallback-text {
+  fill: var(--text-muted);
+  font: 13px var(--font-sans);
+}
+
+.map-country-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-country-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+}
+
+.map-country-row:last-child {
+  border-bottom: 0;
+}
+
+.map-country-row:hover,
+.map-country-row.on {
+  background: var(--accent-soft);
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  text-decoration: none;
+}
+
+.map-country-row:hover .map-country-name,
+.map-country-row.on .map-country-name {
+  color: var(--accent);
+}
+
+.map-country-code {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.map-country-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.map-country-arrow {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.stats-row.stats-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 480px) {
+  .stats-row.stats-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Travels page -- country cards on the index */
+
+.country-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.country-card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+/* Travels page -- per-country detail pages */
+
+.trip-card {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.trip-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.trip-card-header h2 {
+  margin: 0;
+}
+
+.trip-count-chip {
+  margin-left: auto;
+}
+
+.travel-photo-placeholder-wide,
+.travel-photo-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.food-dish {
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
