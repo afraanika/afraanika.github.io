@@ -66,14 +66,25 @@
 
       <div class="map-layout">
         <svg id="travels-map" class="map-svg" viewBox="0 0 760 400" role="img" aria-label="World map highlighting Bangladesh, Thailand, the United Arab Emirates, and Malaysia"></svg>
-        <nav class="map-country-list" id="travels-country-list" aria-label="Countries visited">
-          <!-- Populated by js/travels-map.js. If the script or the map data fails to
-               load, this stays empty -- the card grid below still lists every
-               country either way, so nothing is ever missing, only the map graphic. -->
-        </nav>
+        <div class="map-sidebar">
+          <nav class="map-country-list" id="travels-country-list" aria-label="Countries visited">
+            <!-- Populated by js/travels-map.js. If the script or the map data fails to
+                 load, this stays empty -- the card grid below still lists every
+                 country either way, so nothing is ever missing, only the map graphic. -->
+          </nav>
+          <div class="map-next-up">
+            <div class="map-next-up-label">Next on the list</div>
+            <ul class="chips">
+              <li>Singapore</li>
+              <li>Indonesia</li>
+              <li>Sri Lanka</li>
+              <li>Maldives</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="stats-row stats-row-3">
+      <div class="stats-row">
         <div class="stat">
           <span class="stat-number" data-count-to="4">0</span>
           <span class="stat-label">Countries<br />Visited</span>
@@ -86,49 +97,90 @@
           <span class="stat-number" data-count-to="0">0</span>
           <span class="stat-label">Photos<br />With a Story</span>
         </div>
+        <div class="stat">
+          <span class="stat-number" data-count-to="36">0</span>
+          <span class="stat-label">To Go<br />Before 40</span>
+        </div>
       </div>
     </section>
 
     <section class="tile travel-gallery-tile">
       <h2>By Country</h2>
-      <p class="section-intro">Four so far. Each one opens its own page of trips, photos, and food — filled in as it gets written up.</p>
+      <p class="section-intro">Four so far. Each one opens a page of trips, and every photo will carry the small thing I learned in front of it.</p>
 
       <!--
         Each card links to travels-<country>.html. To add a real cover photo, swap
         the .travel-photo-placeholder div for:
           <img class="travel-photo" src="assets/photos/travel/bangladesh-cover.jpg" alt="Description" loading="lazy" />
-        To add real trip content, edit the linked country page directly -- its own
-        .coming-soon block documents the trip-card structure to paste in.
+        To add real dates/blurb/counts, edit the text and the two <li> counts in
+        .chips directly. To add real trip content, edit the linked country page --
+        its own .coming-soon block documents the trip-card structure to paste in.
       -->
       <div class="travel-grid">
         <a class="travel-entry country-card" href="travels-bangladesh.html">
-          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span class="travel-photo-placeholder-icon">🖼️</span>
+            <span>Cover — Bangladesh</span>
+          </div>
           <div class="travel-entry-body">
+            <span class="travel-entry-date">Dates coming soon</span>
             <h3>Bangladesh</h3>
-            <p>Journal coming soon.</p>
+            <p>First trip write-up coming soon.</p>
+            <ul class="chips">
+              <li>0 trips</li>
+              <li>0 photos</li>
+            </ul>
           </div>
         </a>
         <a class="travel-entry country-card" href="travels-thailand.html">
-          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span class="travel-photo-placeholder-icon">🖼️</span>
+            <span>Cover — Thailand</span>
+          </div>
           <div class="travel-entry-body">
+            <span class="travel-entry-date">Dates coming soon</span>
             <h3>Thailand</h3>
-            <p>Journal coming soon.</p>
+            <p>First trip write-up coming soon.</p>
+            <ul class="chips">
+              <li>0 trips</li>
+              <li>0 photos</li>
+            </ul>
           </div>
         </a>
         <a class="travel-entry country-card" href="travels-uae.html">
-          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span class="travel-photo-placeholder-icon">🖼️</span>
+            <span>Cover — UAE</span>
+          </div>
           <div class="travel-entry-body">
+            <span class="travel-entry-date">Dates coming soon</span>
             <h3>United Arab Emirates</h3>
-            <p>Journal coming soon.</p>
+            <p>First trip write-up coming soon.</p>
+            <ul class="chips">
+              <li>0 trips</li>
+              <li>0 photos</li>
+            </ul>
           </div>
         </a>
         <a class="travel-entry country-card" href="travels-malaysia.html">
-          <div class="travel-photo-placeholder" aria-hidden="true"><span>+ Add photo</span></div>
+          <div class="travel-photo-placeholder" aria-hidden="true">
+            <span class="travel-photo-placeholder-icon">🖼️</span>
+            <span>Cover — Malaysia</span>
+          </div>
           <div class="travel-entry-body">
+            <span class="travel-entry-date">Dates coming soon</span>
             <h3>Malaysia</h3>
-            <p>Journal coming soon.</p>
+            <p>First trip write-up coming soon.</p>
+            <ul class="chips">
+              <li>0 trips</li>
+              <li>0 photos</li>
+            </ul>
           </div>
         </a>
+        <div class="travel-entry travel-teaser">
+          <span class="travel-teaser-title">Number five</span>
+          <p>Singapore, probably. 36 to go before 40.</p>
+        </div>
       </div>
     </section>
   </main>

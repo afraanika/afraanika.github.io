@@ -926,13 +926,19 @@ h3 {
 .travel-photo-placeholder {
   aspect-ratio: 4 / 3;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--text-muted);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   border-bottom: 1px solid var(--border);
+}
+
+.travel-photo-placeholder-icon {
+  font-size: 1.5rem;
 }
 
 .travel-photo {
@@ -1100,25 +1106,48 @@ h3 {
   letter-spacing: 0.05em;
 }
 
+.map-country-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .map-country-name {
   font-family: var(--font-serif);
   font-weight: 700;
   font-size: 1.05rem;
 }
 
-.map-country-arrow {
+.map-country-note {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-top: 0.15rem;
 }
 
-.stats-row.stats-row-3 {
-  grid-template-columns: repeat(3, 1fr);
+.map-country-counts {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
-@media (max-width: 480px) {
-  .stats-row.stats-row-3 {
-    grid-template-columns: 1fr;
-  }
+.map-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-next-up {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.map-next-up-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 780px) {
@@ -1139,6 +1168,29 @@ h3 {
 .country-card:hover {
   border-color: var(--accent);
   text-decoration: none;
+}
+
+.travel-teaser {
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.3rem;
+  padding: 2rem 1.25rem;
+}
+
+.travel-teaser-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.travel-teaser p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
 /* Travels page -- per-country detail pages */
