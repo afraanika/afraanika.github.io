@@ -3,13 +3,11 @@
   const list = document.getElementById("travels-country-list");
   if (!svg || typeof d3 === "undefined") return;
 
-  const NOTE = "First trip write-up coming soon.";
-
   const COUNTRIES = [
-    { id: "050", code: "BD", name: "Bangladesh", lon: 90.41, lat: 23.81, href: "travels-bangladesh.html", trips: 0, photos: 0 },
-    { id: "764", code: "TH", name: "Thailand", lon: 100.5, lat: 13.75, href: "travels-thailand.html", trips: 0, photos: 0 },
-    { id: "784", code: "AE", name: "United Arab Emirates", pinLabel: "UAE", lon: 54.37, lat: 24.45, href: "travels-uae.html", trips: 0, photos: 0 },
-    { id: "458", code: "MY", name: "Malaysia", lon: 101.98, lat: 4.21, href: "travels-malaysia.html", trips: 0, photos: 0 },
+    { id: "050", code: "BD", name: "Bangladesh", note: "First trip write-up coming soon.", lon: 90.41, lat: 23.81, href: "travels-bangladesh.html", trips: 0, photos: 0 },
+    { id: "764", code: "TH", name: "Thailand", note: "First trip write-up coming soon.", lon: 100.5, lat: 13.75, href: "travels-thailand.html", trips: 0, photos: 0 },
+    { id: "784", code: "AE", name: "United Arab Emirates", pinLabel: "UAE", note: "First trip write-up coming soon.", lon: 54.37, lat: 24.45, href: "travels-uae.html", trips: 0, photos: 0 },
+    { id: "458", code: "MY", name: "Malaysia", note: "First trip write-up coming soon.", lon: 101.98, lat: 4.21, href: "travels-malaysia.html", trips: 0, photos: 0 },
   ];
   const idSet = new Set(COUNTRIES.map((c) => c.id));
 
@@ -19,7 +17,7 @@
       <span class="map-country-code">${c.code}</span>
       <span class="map-country-text">
         <span class="map-country-name">${c.name}</span>
-        <span class="map-country-note">${NOTE}</span>
+        <span class="map-country-note">${c.note}</span>
       </span>
       <span class="map-country-counts">${c.trips} trips<br />${c.photos} photos</span>
     </a>`
